@@ -1,0 +1,10 @@
+name: CI  workflow
+on: Workflow on every push to the main branch
+  push:
+    branches: [ "main" ] 
+  push_request:
+    branches: [ "main" ]
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.8-slim
